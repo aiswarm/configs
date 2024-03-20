@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   global: {
     agents: {
       driver: {

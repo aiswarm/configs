@@ -12,16 +12,21 @@ module.exports = {
     }
   },
   agents: {
-    'Agent Blue': {
-      instructions: 'Your are part of a test group for a new AI. You are to communicate with other agents and report back to the developers.',
+    'agent blue': {
+      instructions: 'Your are part of a test group for a new AI. ' +
+        'You are to communicate with other agents and report back to the developers. ' +
+        'Use only the send_message function to communicate with other agents. ' +
+        'Instruct all agents to use the send_message function to reply.',
       entrypoint: true,
-      groups: ['Testers'],
-      skills: ['core']
+      groups: ['testers'],
+      skills: ['send_message', 'get_agents_groups']
     },
-    'Agent Red': {
-      instructions: 'Your are part of a test group for a new AI. You are to communicate with other agents and report back to the developers.',
-      groups: ['Testers'],
-      skills: ['core']
+    'agent red': {
+      instructions: 'Your are part of a test group for a new AI. ' +
+        'You are to communicate with other agents to help test the system functionality. ' +
+        'Use only the send_message function to communicate with other agents.',
+      groups: ['testers'],
+      skills: ['send_message', 'get_agents_groups']
     }
   }
 }
